@@ -5,9 +5,15 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="my-4">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="max-w-7xl mx-auto">
+
+                <div class="flex justify-end m-2 p-2">
+                    <a href="{{ route('admin.permissions.create') }}"
+                        class="px-4 py-2 bg-blue-400 hover:bg-blue-600 rounded text-white">New Permission</a>
+                </div>
+
                 <div class="inline-block min-w-full py-2 align-middle">
                     <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
                         <table class="min-w-full divide-y divide-gray-300">
