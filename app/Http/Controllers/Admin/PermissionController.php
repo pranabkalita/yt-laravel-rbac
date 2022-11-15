@@ -28,7 +28,7 @@ class PermissionController extends Controller
 
         Permission::create($validated);
 
-        return to_route('admin.roles.index');
+        return to_route('admin.roles.index')->with('message', 'New permission created.');
     }
 
     public function edit(Permission $permission)
@@ -44,6 +44,13 @@ class PermissionController extends Controller
 
         $permission->update($validated);
 
-        return to_route('admin.permissions.index');
+        return to_route('admin.permissions.index')->with('message', 'Permission updated.');
+    }
+
+    public function destroy(Permission $permission)
+    {
+        $permission->delete();
+
+        return to_route('admin.permissions.index')->with('message', 'Permission deleted.');
     }
 }
