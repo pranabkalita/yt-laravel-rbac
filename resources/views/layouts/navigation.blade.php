@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
-                    @if(auth()->user()->hasRole('admin'))
+                    @admin
                     <x-nav-link :href="route('admin.roles.index')" :active="request()->routeIs('admin.roles.index')">
                         Roles
                     </x-nav-link>
@@ -30,7 +30,7 @@
                         :active="request()->routeIs('admin.users.index')">
                         Users
                     </x-nav-link>
-                    @endif
+                    @endadmin
                 </div>
             </div>
 
